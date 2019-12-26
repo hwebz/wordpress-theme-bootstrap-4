@@ -30,4 +30,10 @@
     }
 
     add_action('wp_enqueue_scripts', 'setup_scripts');
+
+    function new_excerpt_text() {
+        return '...';
+    }
+
+    add_filter('excerpt_more', 'new_excerpt_text');
 ?>

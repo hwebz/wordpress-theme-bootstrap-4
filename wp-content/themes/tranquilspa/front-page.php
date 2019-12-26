@@ -15,10 +15,9 @@
                 <img src="<?php bloginfo('template_directory'); ?>/images/devider.png" class="w-25">
             </div>
         </div>
-
         <div class="row mt-4 d-flex justify-content-around">
             <div class="col-sm-4">
-                <img src="<?php bloginfo('template_directory') ?>/images/pic1.jpg" alt="" class="card-img-top rounded-circle">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/pic1.jpg" alt="" class="card-img-top rounded-circle">
                 <div class="card-body">
                     <h4 class="card-txt">Spa facilities</h4>
                 </div>
