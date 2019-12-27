@@ -24,11 +24,14 @@
                 </div>
                 <div class="col-sm-4">
                     <h5>Navigation</h5>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Nav 1</a></li>
-                        <li class="list-group-item"><a href="#">Nav 1</a></li>
-                        <li class="list-group-item"><a href="#">Nav 1</a></li>
-                    </ul>
+                    <?php wp_nav_menu(array(
+                        'theme_location'    => 'footer',
+                        'depth'             => 1,
+                        'container'         => false,
+                        'menu_class'        => 'list-group',
+                        'fallback'          => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'            => new WP_Bootstrap_Navwalker()
+                    )); ?>
                 </div>
             </div>
         </footer>

@@ -1,37 +1,28 @@
 <?php get_header(); ?>
-    <section class="container-fluid">
-        <div class="row position-relative d-flex justify-content-center align-items-center">
-            <img src="<?php bloginfo('template_directory'); ?>/images/pic1.jpg" class="header_img" />
-            <div class="position-absolute feature-bg">
-                <p class="feature-text">FULL RESPONSIVE <br> PREMIUM SPA THEME <br> FOR WORDPRESS</p>
-            </div>
-        </div>
-    </section>
-
     <section class="container-fluid text-center py-5 welcome">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h3>Welcome to Tranquil Spa</h3>
-                <img src="<?php bloginfo('template_directory'); ?>/images/devider.png" class="w-25">
+                <h3><?php the_field('welcome_section_title'); ?></h3>
+                <img src="<?php the_field('section_title_image'); ?>" class="w-25">
             </div>
         </div>
         <div class="row mt-4 d-flex justify-content-around">
             <div class="col-sm-4">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/pic1.jpg" alt="" class="card-img-top rounded-circle">
+                <img src="<?php the_field('welcome_section_1_image') ?>" alt="" class="card-img-top rounded-circle">
                 <div class="card-body">
-                    <h4 class="card-txt">Spa facilities</h4>
+                    <h4 class="card-txt"><?php the_field('welcome_section_1_text') ?></h4>
                 </div>
             </div>
             <div class="col-sm-4">
-                <img src="<?php bloginfo('template_directory') ?>/images/pic1.jpg" alt="" class="card-img-top rounded-circle">
+                <img src="<?php the_field('welcome_section_2_image') ?>" alt="" class="card-img-top rounded-circle">
                 <div class="card-body">
-                    <h4 class="card-txt">Hair &amp; make up</h4>
+                    <h4 class="card-txt"><?php the_field('welcome_section_2_text') ?></h4>
                 </div>
             </div>
             <div class="col-sm-4">
-                <img src="<?php bloginfo('template_directory') ?>/images/pic1.jpg" alt="" class="card-img-top rounded-circle">
+                <img src="<?php the_field('welcome_section_3_image') ?>" alt="" class="card-img-top rounded-circle">
                 <div class="card-body">
-                    <h4 class="card-txt">Take a tour</h4>
+                    <h4 class="card-txt"><?php the_field('welcome_section_3_text') ?></h4>
                 </div>
             </div>
         </div>
@@ -49,7 +40,7 @@
             <div class="col-sm-4">
                 <div class="card">
                     <h4 class="card-header py-5 position-relative">
-                        Family swim package
+                        <?php __('Family swim package', 'tranquilwp'); ?>
                         <span class="font-weight-bold position-absolute">$60</span>
                     </h4>
                     <div class="card-body">

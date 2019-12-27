@@ -29,3 +29,11 @@
                 )); ?>
             </nav>
         </header>
+        <section class="container-fluid">
+            <div class="row position-relative d-flex justify-content-center align-items-center">
+                <img src="<?php header_image(); ?>" class="header_img" />
+                <div class="position-absolute feature-bg">
+                    <p class="feature-text"><?php feature_text(); ?></p>
+                </div>
+            </div>
+        </section>
